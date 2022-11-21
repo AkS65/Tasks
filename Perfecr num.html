@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect number</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function perfectNumber()
+        {
+            var flag,number,remainder,addition = 0,i;
+            number = Number(document.getElementById("N").value);
+            a = number;
+            for(i = 0; i < number; i++)
+            {
+                remainder = number%i;
+                if(remainder==0)
+                {
+                    addition += i;
+                }
+            }
+            if(addition == a)
+            {
+                document.writeln("The inputed number is Perfect");
+            }
+            else
+            {
+                document.writeln("The inputed number is not Perfect");
+            }
+        }
+    </script>
+</head>
+<body>
+<br>
+<h2>Check a number is Perfect or not</h2>
+Enter The Number :<input type="text" name="n" id = "N"/ placeholder="enter the number">
+
+<br>
+<button onClick="perfectNumber()">CHECK</button>
+</body>
+</body>
+</html>

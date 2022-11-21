@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibo</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fibonacci Generator </h1>
+
+<input type="number" id="myNumber" value="0">
+
+
+<button onclick="myFunction()">Go</button>
+
+
+<p id="ak"></p>
+    <script>
+        function myFunction() {
+    var n = document.getElementById("myNumber").value;
+    document.getElementById("ak").innerHTML = fibonacciGenerator (n);
+}
+
+    var sequence = [0]; 
+    var previousNumber = 1;
+    var presentNumber = 0;
+    var sum = 0;
+ 
+    function fibonacciGenerator (n) {
+  
+        while (sequence.length < n) {
+        sum = previousNumber + presentNumber;
+        previousNumber = presentNumber;
+        presentNumber = sum;
+        sequence.push(sum);
+     
+    }
+    return (sequence);
+}
+    </script>
+</body>
+</html>
